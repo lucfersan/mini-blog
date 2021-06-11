@@ -4,12 +4,12 @@ import {
   Delete,
   Get,
   HttpStatus,
-  Param,
   Post,
   Put,
+  Req,
   Res,
 } from '@nestjs/common';
-import { Response } from 'express';
+import { Request, Response } from 'express';
 import { CreateUserDTO } from './create-user-DTO';
 import { UsersService } from './users.service';
 
@@ -39,25 +39,31 @@ export class UsersController {
     return response.json(user);
   }
 
-  @Put('/:id')
+  @Put()
   async update(
-    @Param('id') id: string,
     @Body() { name, email, password }: CreateUserDTO,
+    @Req() request: Request,
     @Res() response: Response,
   ): Promise<Response> {
+    const { id } = request.user;
+
     const user = await this.userService.updateUser({
-      where: { id },
-      data: { name, email, password },
+      id,
+      name,
+      email,
+      password,
     });
 
     return response.json(user);
   }
 
-  @Delete('/:id')
+  @Delete()
   async delete(
-    @Param('id') id: string,
+    @Req() request: Request,
     @Res() response: Response,
   ): Promise<Response> {
+    const { id } = request.user;
+
     await this.userService.deleteUser({ id });
     return response.status(HttpStatus.NO_CONTENT).json();
   }

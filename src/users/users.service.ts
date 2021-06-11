@@ -1,7 +1,24 @@
-import { Prisma, User } from '.prisma/client';
+import { User } from '.prisma/client';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { hash } from 'bcryptjs';
 import { PrismaService } from 'src/prisma/prisma.service';
+
+type CreateRequest = {
+  name: string;
+  email: string;
+  password: string;
+};
+
+type UpdateRequest = {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+};
+
+type DeleteRequest = {
+  id: string;
+};
 
 @Injectable()
 export class UsersService {
@@ -12,11 +29,7 @@ export class UsersService {
     return users;
   }
 
-  async createUser({
-    name,
-    email,
-    password,
-  }: Prisma.UserCreateInput): Promise<User> {
+  async createUser({ name, email, password }: CreateRequest): Promise<User> {
     const userExists = await this.prisma.user.findUnique({ where: { email } });
 
     if (userExists) {
@@ -36,34 +49,46 @@ export class UsersService {
     return user;
   }
 
-  async updateUser(params: {
-    where: Prisma.UserWhereUniqueInput;
-    data: Prisma.UserUpdateInput;
-  }): Promise<User> {
-    const {
-      where: { id },
-      data: { name, email, password },
-    } = params;
-
+  async updateUser({
+    id,
+    name,
+    email,
+    password,
+  }: UpdateRequest): Promise<User> {
     const userExists = await this.prisma.user.findUnique({ where: { id } });
 
     if (!userExists) {
       throw new HttpException('User does not exist.', HttpStatus.NOT_FOUND);
     }
 
+    if (userExists.email !== email) {
+      const findUser = await this.prisma.user.findUnique({
+        where: { email },
+      });
+
+      if (findUser) {
+        throw new HttpException(
+          'Email provided already registered.',
+          HttpStatus.CONFLICT,
+        );
+      }
+    }
+
+    const hashedPassword = await hash(password, 8);
+
     const updatedUser = await this.prisma.user.update({
       where: { id },
       data: {
         name,
         email,
-        password,
+        password: hashedPassword,
       },
     });
 
     return updatedUser;
   }
 
-  async deleteUser({ id }: Prisma.UserWhereUniqueInput): Promise<void> {
+  async deleteUser({ id }: DeleteRequest): Promise<void> {
     const userExists = await this.prisma.user.findUnique({ where: { id } });
 
     if (!userExists) {
