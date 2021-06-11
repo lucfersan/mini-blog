@@ -13,14 +13,16 @@ import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
 import { jwtConfig } from './config/auth';
 import { EnsureAuthenticatedMiddleware } from './middlewares/ensure-authenticated.middleware';
+import { PostsController } from './posts/posts.controller';
+import { PostsService } from './posts/posts.service';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     JwtModule.register({ secret: jwtConfig.secret }),
   ],
-  controllers: [UsersController, AuthController],
-  providers: [PrismaService, UsersService, AuthService],
+  controllers: [UsersController, AuthController, PostsController],
+  providers: [PrismaService, UsersService, AuthService, PostsService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
@@ -33,6 +35,7 @@ export class AppModule implements NestModule {
         path: 'users',
         method: RequestMethod.DELETE,
       },
+      'posts',
     );
   }
 }
