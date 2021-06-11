@@ -675,6 +675,23 @@
     consola "^2.15.0"
     node-fetch "^2.6.1"
 
+"@prisma/client@^2.24.1":
+  version "2.24.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.24.1.tgz#c4f26fb4d768dd52dd20a17e626f10e69cc0b85c"
+  integrity sha512-vllhf36g3oI98GF1Q5IPmnR5MYzBPeCcl/Xiz6EAi4DMOxE069o9ka5BAqYbUG2USx8JuKw09QdMnDrp3Kyn8g==
+  dependencies:
+    "@prisma/engines-version" "2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4"
+
+"@prisma/engines-version@2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4":
+  version "2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4.tgz#2c5813ef98bcbe659b18b521f002f5c8aabbaae2"
+  integrity sha512-60Do+ByVfHnhJ2id5h/lXOZnDQNIf5pz3enkKWOmyr744Z2IxkBu65jRckFfMN5cPtmXDre/Ay/GKm0aoeLwrw==
+
+"@prisma/engines@2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4":
+  version "2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4.tgz#7e542d510f0c03f41b73edbb17254f5a0b272a4d"
+  integrity sha512-29/xO9kqeQka+wN5Ev10l5L4XQXNVXdPToJs1M29VZ2imQsNsL4rtz26m3qGM54IoGWwwfTVdvuVRxKnDl2rig==
+
 "@schematics/schematics@0.1102.6":
   version "0.1102.6"
   resolved "https://registry.yarnpkg.com/@schematics/schematics/-/schematics-0.1102.6.tgz#2ce02f7c11558471628eafeb34faaa7f5ab4b22c"
@@ -734,6 +751,11 @@
   integrity sha512-Vs0hm0vPahPMYi9tDjtP66llufgO3ST16WXaSTtDGEl9cewAl3AibmxWw6TINOqHPT9z0uABKAYjT9jNSg4npw==
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/bcryptjs@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@types/bcryptjs/-/bcryptjs-2.4.2.tgz#e3530eac9dd136bfdfb0e43df2c4c5ce1f77dfae"
+  integrity sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==
 
 "@types/body-parser@*":
   version "1.19.0"
@@ -1412,6 +1434,11 @@ base@^0.11.1:
     isobject "^3.0.1"
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
+
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
 
 big.js@^5.2.2:
   version "5.2.2"
@@ -4422,6 +4449,13 @@ pretty-format@^26.0.0, pretty-format@^26.6.2:
     ansi-regex "^5.0.0"
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
+
+prisma@^2.24.1:
+  version "2.24.1"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-2.24.1.tgz#f8f4cb8baf407a71800256160277f69603bd43a3"
+  integrity sha512-L+ykMpttbWzpTNsy+PPynnEX/mS1s5zs49euXBrMjxXh1M6/f9MYlTNAj+iP90O9ZSaURSpNa+1jzatPghqUcQ==
+  dependencies:
+    "@prisma/engines" "2.24.1-2.18095475d5ee64536e2f93995e48ad800737a9e4"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
