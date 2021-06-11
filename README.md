@@ -1,73 +1,80 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+  <h3 align="center">🔺 Mini Blog 📔</h3>
+
+  <p align="center">
+    This a simple blog backend application made with Nest and Prisma.
+    <br />
+    <a href="https://github.com/lucfersan/mini-blog"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    ·
+    <a href="https://github.com/lucfersan/mini-blog/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/lucfersan/mini-blog/issues">Request Feature</a>
+  </p>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## 📚 About The Project
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+I've been hearing good things about Prisma these couple of days, that's what motivated me to use it.
 
-## Description
+My first impressions of Prisma were amazing. I've never experienced an ORM like this before. Its way to work with the schema and run the migrations is simply fantastic.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+In this project I also decided to maintain Nest, just to get to know it a little bit more and to practice a few. I'm quite liking Nest, and combining it with Prisma was what made this project really fun!
 
-## Installation
+I hope to work on new projects with those technologies.
 
-```bash
-$ npm install
-```
+## 🚀 Installation
 
-## Running the app
+1. Clone the repo
+   ```sh
+   git clone https://github.com/lucfersan/mini-blog
+   ```
+2. Install NPM packages
+   ```sh
+   yarn
+   ```
+3. Create a database and a Postgres server using docker or your local machine.
+
+## 💻 Running the app
 
 ```bash
 # development
 $ npm run start
+or
+$ yarn start
 
 # watch mode
 $ npm run start:dev
+or
+$ yarn start:dev
 
 # production mode
 $ npm run start:prod
+or
+$ yarn start:prod
 ```
 
-## Test
+## 🔺 Prisma Studio
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ yarn prisma studio
 ```
 
-## Support
+## 🗞️ License
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## Stay in touch
+## 🤝 Contributing
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## License
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Nest is [MIT licensed](LICENSE).
+## 📧 Contact
+
+Lucas Fernandes - fernandes.lucas11@outlook.com
